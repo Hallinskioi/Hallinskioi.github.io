@@ -8,7 +8,7 @@ body {
     color: whitesmoke;
     font-family: Verdana;
     background-color: black;
-    width: 65%;
+    width: 70%;
     padding: 10px;
 }
 
@@ -47,7 +47,7 @@ a:hover {
 .container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-content: center;
 }
 
@@ -128,8 +128,9 @@ footer {
 
 .PostText img {
     flex-grow: 1;
-    height: 50%;
+    height: auto;
     width: 50%;
+    object-fit: contain;
 }
 
 .PostText {
@@ -145,6 +146,10 @@ footer {
 
 .PostText h3 {
     text-align: center;
+}
+
+.PostText span {
+    font-size: 0.8em;
 }
 
 .PostMain {
