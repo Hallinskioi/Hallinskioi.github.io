@@ -5,9 +5,9 @@ html {
 body {
     margin: auto;
     text-align: center;
-    color: black;
+    color: whitesmoke;
     font-family: Verdana;
-    background-color: whitesmoke;
+    background-color: black;
     width: 65%;
     padding: 10px;
 }
@@ -35,21 +35,13 @@ nav li, footer li {
     margin: 20px;
 }
 
-nav a {
-    color: darkblue;
-}
-
-footer nav a {
+a {
     color: white;
+    text-decoration: none;
 }
 
-a:link {
-
-}
-
-
-main {
-
+a:hover {
+    color: rgb(125,0,0);
 }
 
 .container {
@@ -59,79 +51,104 @@ main {
     justify-content: center;
 }
 
-#img1 {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
-    z-index: 1;
-}
-
-#img2 {
-    grid-column: 3 / span 3;
-    grid-row: 2 / span 2;
-    z-index: 2;
-}
-
-#img3 {
-    grid-column: 5 / span 3;
-    grid-row: 3 / span 2;
-    z-index: 3;
-}
-
-img {
+.container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
+.container img:hover {
+    transform: scale(2.0);
+    opacity: 1.0;
+    z-index: 3;
+}
+
+.container span {
+   text-align: center;
+   font-size: 0.7em;
+}
+
+#img1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+#img2 {
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 2;
+}
+
+#img3 {
+    grid-column: 5 / span 3;
+    grid-row: 1 / span 2;
+}
+
 #tag1 {
     grid-column: 1 / span 2;
     grid-row: 3 / span 1;
-    z-index: 5;
 }
 
 #tag2 {
     grid-column: 3 / span 2;
-    grid-row: 4 / span 1;
-    z-index: 5;
+    grid-row: 3 / span 1;
 }
 
 #tag3 {
     grid-column: 5 / span 2;
-    grid-row: 5 / span 1;
-    z-index: 5;
+    grid-row: 3 / span 1;
 }
 
-.container span {
-    text-align: center;
-    font-size: 0.7em;
-}
 
 footer {
-    margin: auto;
+    margin: 0px;
     text-align: center;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     align-items: center;
-    z-index: 10;
+    z-index: 1;
     background-color: black;
     color: white;
     font-size: 1em;
 }
 
-footer, span {
+.PostOutline {
+    padding: 20px;
+    border: solid thick white;
     text-align: left;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 }
 
-footer span {
-    font-size: 0.9em;
-    padding: 10px;
-
+.PostText img {
+    flex-grow: 1;
+    height: 50%;
+    width: 50%;
 }
 
-footer span a {
-    color: white;
+.PostText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-around;
+    margin-bottom: 20px;
+    border: solid white 2px;
+}
 
+.PostText h3 {
+    text-align: center;
+}
+
+.PostMain {
+    margin: 10px;
+    flex-grow: 2;
+    flex-basis: 500px;
 }
