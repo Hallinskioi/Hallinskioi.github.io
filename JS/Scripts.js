@@ -9,15 +9,15 @@ function intro() {
 
 function imageChangerDOW() {
     let anImage = document.getElementById("mapHighlight");
-    let imageArray = [  "../Images/ModsMapsImages/map0.png",
-                        "../Images/ModsMapsImages/map1.png",
-                        "../Images/ModsMapsImages/map2.jpg",
-                        "../Images/ModsMapsImages/map3.png",
-                        "../Images/ModsMapsImages/map4.png",
-                        "../Images/ModsMapsImages/map5.png",
-                        "../Images/ModsMapsImages/map6.png",
-                        "../Images/ModsMapsImages/map7.png",
-                        "../Images/ModsMapsImages/map8.png"
+    let imageArray = [  "Images/ModsMapsImages/map0.png",
+                        "Images/ModsMapsImages/map1.png",
+                        "Images/ModsMapsImages/map2.jpg",
+                        "Images/ModsMapsImages/map3.png",
+                        "Images/ModsMapsImages/map4.png",
+                        "Images/ModsMapsImages/map5.png",
+                        "Images/ModsMapsImages/map6.png",
+                        "Images/ModsMapsImages/map7.png",
+                        "Images/ModsMapsImages/map8.png"
     ];
 
     anImage.src = imageArray[imageIndex];
@@ -29,7 +29,7 @@ function imageChangerDOW() {
 
 function imageChangeOnClick() {
     let clickable = document.getElementById("skHighlight");
-    let imageArraySk = ["../Images/ModsMapsImages/sk1.jpg", "../Images/ModsMapsImages/sk2.jpg", "../Images/ModsMapsImages/sk3.jpg"];
+    let imageArraySk = ["Images/ModsMapsImages/sk1.jpg", "Images/ModsMapsImages/sk2.jpg", "Images/ModsMapsImages/sk3.jpg"];
     clickable.src = imageArraySk[imageSkIndex];
     imageSkIndex++;
     if (imageSkIndex >= imageArraySk.length) {
