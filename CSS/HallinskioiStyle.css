@@ -181,3 +181,51 @@ th {
     text-align: center;
     font-size: 1.1em;
 }
+
+.TutorialText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.TutorialText img {
+    flex-grow: 1;
+    height: auto;
+    width: 70%;
+    object-fit: contain;
+}
+
+.TutorialMain {
+    margin: 10px;
+
+}
+
+.TutorialMain img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.TutorialMain img:hover {
+    transform: scale(1.8);
+    opacity: 1.0;
+    z-index: 3;
+
+}
+
+.TutorialMain h3 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.TutorialMain span {
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}

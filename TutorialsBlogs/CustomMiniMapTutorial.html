@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta lang="en" />
+    <title> Dan Smart's Portfolio | My Blog</title>
+    <link rel="shortcut icon" href="Images/homeIcon.ico" />
+    <link rel="stylesheet" type="text/css" href="../CSS/HallinskioiStyle.css" />
+    <script src="JS/Scripts.js" type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../Web-Developer.html">Web Dev</a>
+                </li>
+                <li>
+                    <a href="../Games.html">Games</a>
+                </li>
+                <li>
+                    <a href="../ModsMaps.html">Mods & Maps</a>
+                </li>
+                <li>
+                    <a href="../MyBlog.html">My Blog & Tutorials</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>D. Smart's Portfolio</h1>
+        <h4>Aspiring Full Stack Developer, Amateur Game Developer & Video Game Modder</h4>
+    </header>
+    <br />
+    <main>
+        <h2>My Tutorials & Blogs</h2>
+        <p></p>
+        <nav>
+            <p>
+                Search by Tag:
+            </p>
+            <ul>
+                <li>
+                    <a>Blogs</a>
+                </li>
+                <li>
+                    <a>Dawn of War</a>
+                </li>
+                <li>
+                    <a>Unity</a>
+                </li>
+                <li>
+                    <a>Web Design</a>
+                </li>
+            </ul>
+        </nav>
+        <br />
+        <div class="PostOutline">
+            <div class="TutorialText">
+                <img src="../Images/BlogImages/blog_tut_mm1.png" />
+                <div class="TutorialMain">
+                    <br />
+                    <h3>How to make a Custom MiniMap for Dawn of War</h3>
+                    <span>Read Time: 5 mins</span>
+                    <p>
+                        At the time of writing this, Relic News is down and the Youtube links are gone as well. So I'm making a tutorial for fellow modders on how to make custom minimaps. This tutorial is for people who know how to make maps already.
+                        For this tutorial I'll be using my recently released Choral City map and Gimp 2.
+                        <br />
+                        <br />
+                        Tools Needed:
+                        <ul>
+                            <li>
+                                A map made with the Dawn of War Mod tools. A link for the tools can be found <a href="https://www.moddb.com/games/dawn-of-war/downloads/wh40k-dawn-of-war-mod-tools-v141-with-samples" target="_blank">here</a>.
+                                We are using the Mission Editor tool.
+                            </li>
+                            <li>
+                                Gimp 2/Photoshop or any other image editing software that can crop/scale and export .tga files.
+                            </li>
+                            <li>
+                                About 300kb to 1MB of space on your hard drive.
+                            </li>
+                        </ul>
+                        <br />
+                        <br />
+                        <strong>Step One:</strong>
+                        <br />
+                        <br />
+                        Open up your map with the Mission Editor and disable the Fog and Sky box (Ctrl F + Ctrl K).
+                        Then find the middle of your map and zoom out until your entire playable area of your map is in the window and a little of the outside as well. (See Picture 1)
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity1.png" id="Image1" />
+                        <span>Image 1</span>
+                        <br />
+                        Note: Enabling the Impass Map Editor will help you find your playable area.
+                        <br />
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity2.png" />
+                        <span>Image 2</span>
+
+                        Then take a screen shot of this image. I use the Print Screen button. The snipping tool built into Windows 10 would also work.
+                        <br />
+                        <br />
+                        <strong id="StepTwo">Step Two:</strong>
+                        <br />
+                        <br />
+                        Open up your image editing software, paste your screenshot onto the canvas and then crop the image as best you can until you only have playable space in the image. I keep the Mission Editor open in another window with
+                        the Impass Tool on to help align the playspace.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity3.png" />
+                        <span>Image 3</span>
+                        <br />
+                        Then save this in an easy to access directory. The name of the file is not currently relevant.
+                        <br />
+                        <br />
+                        <strong>Step Three:</strong>
+                        <br />
+                        <br />
+                        Our next step is to scale the image. For GIMP click on the Image tab and then select Scale Image.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity4.png" />
+                        <span>Image 4</span>
+
+                        This part is important. Dawn Of War maps require two images, an icon for use in the main menu and the minimap. I'll show you how to make both.
+                        For the icon, scale the image down 512 x 512. Don't worry about any other settings and confirm your scale.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity5.png" />
+                        <span>Image 5</span>
+
+                        For the minimap, you need to scale the image down to 256 x 256, once again don't worry about any other settings.
+                        <br />
+                        <br />
+                        <strong>Step Four:</strong>
+                        <br />
+                        <br />
+                        Now with your small images, you need to export them as .tga files.
+                        For Gimp click on File and then Export As.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity6.png" />
+                        <span>Image 6</span>
+
+                        I recommend setting your export path to your game directory /DXP2/Data/Scenarios/mp.
+                        <br />
+                        Now an important thing to note is that these images need to be named the same as your map except for their suffix. So for example in the case of Choral City you will end up with four files:
+                        <ul>
+                            <li>
+                                ChoralCity.tga (this is the main map file)
+                            </li>
+                            <li>
+                                ChoralCity.sgb (this is the second map file)
+                            </li>
+                            <li>
+                                ChoralCity_icon.tga (this is the larger 512 x 512 file)
+                            </li>
+                            <li>
+                                ChoralCity_mm.tga (this is the smaller 256 x 256 file)
+                            </li>
+                        </ul>
+
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity7.png" />
+                        <span>Image 7</span>
+
+                        Once named correctly click Export. You will get some options to choose from, don't worry about any of them except for RLE compression. This needs to be unchecked.
+                        Then export the file.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity8.png" />
+                        <span>Image 8</span>
+                        Congratulations you've made an icon and minimap for Dawn of War. If these files are exported to the game folder, you should now be able to see them in game.
+                        <img src="../Images/BlogImages/CustomMiniMap/Blog_ChoralCity9.png" />
+                        <span>Image 9</span>
+                        <br />
+                        <strong>F.A.Q</strong>
+                        <ul>
+                            <li>
+                                My minimap is green / my icon is black?
+                                <br />
+                                Double check the images are the correct size and their names match the map file.
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                My minimap isn't accurate?
+                                <br />
+                                Refer back to <a href="#StepTwo">Step Two</a> and adjust your cropping then follow the rest of the steps.
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                My minimap is the wrong way round / at the wrong angle?
+                                <br />
+                                See <a href="#Image1">Image 1</a>, the top of the map is top right border from the default camera. Adjust it with the initial screenshot or in Gimp rotate the image.
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                How do I do this in Photoshop?
+                                <br />
+                                You'll have to find the settings yourself but the method is exactly the same.
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                What about the capture points/relics etc from your last screenshot?
+                                <br />
+                                The engine places them onto the minimap, you don't have to do it.
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Why is Image 7 showing a different file name?
+                                <br />
+                                During the creation of that map, the file was called <strong>Betrayal_HHH.tga</strong>, I renamed it for this tutorial so to not confuse people. I hope it worked!
+                                <br />
+                                <br />
+                            </li>
+                        </ul>
+                        <br />
+                        Thankyou for reading. If you have any questions, please contact me on <a href="https://www.moddb.com/messages/compose?to=Hallinskioi" target="_blank">moddb</a>.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../Web-Developer.html">Web Dev</a>
+                </li>
+                <li>
+                    <a href="../Games.html">Games</a>
+                </li>
+                <li>
+                    <a href="../ModsMaps.html">Mods & Maps</a>
+                </li>
+                <li>
+                    <a href="../MyBlog.html">My Blog & Tutorials</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
