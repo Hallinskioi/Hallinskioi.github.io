@@ -45,10 +45,12 @@ a:hover {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    align-content: stretch;
 }
 
 .container img {
@@ -61,41 +63,6 @@ a:hover {
     transform: scale(2.0);
     opacity: 1.0;
     z-index: 3;
-}
-
-.container span {
-   text-align: center;
-   font-size: 0.7em;
-}
-
-#img1 {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
-}
-
-#img2 {
-    grid-column: 3 / span 3;
-    grid-row: 1 / span 2;
-}
-
-#img3 {
-    grid-column: 5 / span 3;
-    grid-row: 1 / span 2;
-}
-
-#tag1 {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-}
-
-#tag2 {
-    grid-column: 3 / span 2;
-    grid-row: 3 / span 1;
-}
-
-#tag3 {
-    grid-column: 5 / span 2;
-    grid-row: 3 / span 1;
 }
 
 
@@ -228,4 +195,20 @@ th {
     text-align: center;
     font-size: 0.8em;
     margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 801px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+    }
+
+    .container img:hover {
+        transform: scale(1.2);
+    }
 }
