@@ -59,7 +59,7 @@ a:hover {
 }
 
 .container img:hover {
-    transform: scale(2.0);
+    transform: scale(1.5);
     opacity: 1.0;
     z-index: 3;
 }
@@ -110,7 +110,7 @@ footer {
     border: solid white 2px;
 }
 
-.PostText h3 {
+.PostText h2 {
     text-align: center;
 }
 
@@ -178,7 +178,7 @@ th {
 }
 
 .TutorialMain img:hover {
-    transform: scale(1.8);
+    transform: scale(1.4);
     opacity: 1.0;
     z-index: 3;
 
